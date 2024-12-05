@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="styles.css"> 
+    <title>Tecnoeducación - Soporte</title> 
+</head>
+
+<body>
+    <header> 
+        <div class="logo-container">
+            <img src="imagenes/LOGO.png" alt="Icono de Tecnoeducación" class="logo" />
+            <span class="site-name">Tecnoeducación</span>
+        </div>
+        
+        <div id="header"></div>
+
+    </header>
+
+    <div class="banner">
+        <img src="imagenes/primer-plano-manos-usando-computadora-portatil-pantalla-que-muestra-datos-analisis.jpg" alt="Banner de Tecnoeducación" />
+        <div class="welcome-message3">"Nuestro equipo de soporte técnico está disponible para resolver tus inquietudes "</div>
+    </div>
+
+    <main class="grid-container"> 
+        <section class="support-form"> 
+            <form> 
+                <label for="name">Nombre:</label> 
+                <input type="text" id="name" name="name" required> 
+
+                <label for="email">Email:</label> 
+                <input type="email" id="email" name="email" required> 
+
+                <label for="message">Mensaje:</label> 
+                <textarea id="message" name="message" required></textarea> 
+
+                <button type="submit">Enviar</button> 
+            </form>
+        </section>
+
+        <section class="support-info"> 
+            <div class="support-info-box">
+                <h4>Soporte Técnico</h4>
+                <p>Si tienes problemas con nuestros cursos o necesitas asistencia técnica, nuestro equipo de soporte técnico está aquí para ayudarte. Puedes comunicarte con nosotros a través del formulario de contacto o llamarnos al número de atención al cliente. Estamos disponibles de lunes a viernes, de 9:00 a 18:00 horas. ¡No dudes en contactarnos si necesitas ayuda!</p>
+            </div> 
+            <div class="support-info-box">
+                <h4>Ayuda en Línea</h4>
+                <p>Ofrecemos un servicio de ayuda en línea para resolver tus dudas de manera rápida y eficiente. Puedes acceder a nuestra sección de tutoriales y guías interactivas, donde encontrarás información sobre cómo navegar por la plataforma, acceder a tus cursos, y más. También puedes participar en nuestros foros de discusión para interactuar con otros estudiantes y compartir tus experiencias.</p>
+            </div> 
+            <div class="support-info-box">
+                <h4>Preguntas Frecuentes</h4>
+                <p>Aquí encontrarás respuestas a las preguntas más comunes que nos hacen nuestros estudiantes:</p>
+                <ul>
+                    <li><strong>¿Cómo puedo inscribirme en un curso?</strong><br>Simplemente ve a la sección de cursos, elige el curso que te interese y haz clic en "Inscribirse". Luego, sigue las instrucciones en pantalla para completar tu registro.</li>
+                    <li><strong>¿Qué métodos de pago aceptan?</strong><br>Aceptamos tarjetas de crédito, débito y pagos a través de plataformas seguras como PayPal.</li>
+                    <li><strong>¿Puedo acceder a los cursos en cualquier momento?</strong><br>Sí, nuestros cursos están disponibles las 24 horas del día, los 7 días de la semana. Puedes aprender a tu propio ritmo.</li>
+                    <li><strong>¿Qué hago si tengo problemas técnicos?</strong><br>Si experimentas problemas técnicos, por favor contacta a nuestro soporte técnico a través del formulario de contacto, y nos aseguraremos de ayudarte lo antes posible.</li>
+                </ul>
+            </div> 
+        </section>
+    </main>
+    <!-- Aquí se cargará el footer -->
+    <div id="footer"></div>
+    <!-- Script para cargar el header y el footer -->
+    <script src="load-header-footer.js"></script>
+</body>
+</html>

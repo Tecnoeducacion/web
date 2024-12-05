@@ -1,0 +1,581 @@
+body {
+  font-family: Arial, sans-serif; /* Establece la fuente del texto a Arial y, si no está disponible, a cualquier fuente sans-serif. */
+  margin: 0; /* Elimina los márgenes por defecto del navegador. */
+  padding: 0; /* Elimina el padding por defecto del navegador. */
+  box-sizing: border-box; /* Cambia el modelo de caja para que el padding y los bordes se incluyan en el ancho y alto total del elemento. */
+  display: flex; /* Utiliza un diseño flexbox para el contenedor principal. */
+  flex-direction: column; /* Organiza los elementos secundarios en una columna. */
+  min-height: 100vh; /* Asegura que el contenedor principal tenga al menos la altura de la ventana gráfica. */
+  border: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #3bbeee; /* Fondo del header */
+  
+}
+/* Estilos para el menú */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+
+}
+
+nav ul li {
+  position: relative;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  display: block;
+}
+
+/* Ocultar el menú desplegable por defecto */
+nav ul li ul.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+nav ul li ul.submenu li {
+  width: 180px; /* Ajusta el ancho si es necesario */
+}
+
+nav ul li ul.submenu li a {
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  display: block;
+  text-align: left;
+}
+
+/* Mostrar el menú desplegable cuando el usuario pasa el ratón por encima */
+nav ul li:hover ul.submenu {
+  display: block;
+}
+
+/* Opcional: agregar estilo a los enlaces del menú cuando el ratón pasa por encima */
+nav ul li ul.submenu li a:hover {
+  background-color: #ddd;
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 70px; /* Ajusta el tamaño del ícono */
+  height: 60px;
+  margin-right: 20px; /* Espacio entre el ícono y el nombre del sitio */
+}
+
+.site-name {
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #333; /* Color del texto del nombre del sitio */
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333; /* Color de los enlaces */
+  font-weight: bold;
+}
+
+nav {
+  display: flex; /* Utiliza un diseño flexbox para el menú de navegación. */
+  justify-content: flex-end; /* Alinea los elementos del menú hacia la derecha. */
+}
+
+nav ul {
+  list-style-type: none; /* Elimina los puntos de la lista. */
+  padding: 0; /* Elimina el padding por defecto. */
+  margin: 0; /* Elimina el margen por defecto. */
+  margin-right: 20px; /* Añade un margen a la derecha del menú. */
+}
+
+nav ul li {
+  display: inline; /* Muestra los elementos de la lista en línea. */
+  margin-right: 20px; /* Añade un margen a la derecha de cada elemento de la lista. */
+}
+
+nav ul li a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces. */
+  color: white; /* Color del texto de los enlaces a blanco. */
+  font-size: 25px; /* Tamaño de fuente de 18 píxeles. */
+}
+
+.banner {
+  position: relative; /* Posicionamiento relativo del contenedor del banner */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+.banner img {
+  width: 80%; /* Asegura que la imagen ocupe todo el ancho del banner */
+  height: auto;
+}
+
+.welcome-message {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente para contraste */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 75px; /* Aumenta el tamaño de la fuente */
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  max-width: 1000px; /* Ajusta el ancho para seguir en dos renglones */
+  text-align: center;
+  line-height: 1.2; /* Mantiene un buen espacio entre líneas */
+}
+.welcome-message3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 75px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente para contraste */
+    text-shadow: 2px 2px 5px black; /* Sombra negra alrededor del texto */
+    border-radius: 20px; /* Bordes ligeramente redondeados */
+}
+
+
+.grid-container {
+  display: grid; /* Utiliza un diseño de cuadrícula. */
+  grid-template-columns: 70% 30%; /* Define dos columnas: la primera ocupa el 60% y la segunda el 40% del ancho. */
+  gap: 50px; /* Espacio de 50 píxeles entre las columnas. */
+  padding: 20px; /* Espaciado interno de 20 píxeles. */
+  flex: 1; /* Permite que la cuadrícula crezca para llenar el espacio restante. */
+}
+
+.main-content,
+.sidebar,
+.Comentario,
+.video-section,
+.contenido-inicial
+.support-form,
+.support-info {
+  background-color: none; /* Color de fondo cyan para las secciones. */
+  padding: 15px; /* Espaciado interno de 15 píxeles. */
+  border-radius: 5px; /* Bordes redondeados. */
+  font-size: 1.5em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor de las secciones. */
+  text-align: justify;
+  
+}
+
+
+
+.main-content h2 {
+    text-align: center; /* Centra el texto */
+}
+
+.sidebar-item {
+  text-align: center; /* Centra las imágenes y los comentarios */
+  margin-bottom: 5px; /* Espacio entre los elementos del sidebar */
+}
+
+.sidebar-image {
+  width: 100%; /* Asegura que la imagen se ajuste al ancho del contenedor */
+  max-width: 250px; /* Puedes ajustar este tamaño según tu diseño */
+  border-radius: 8px; /* Bordes ligeramente redondeados para las imágenes */
+}
+
+.sidebar-comment {
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 20px; /* Tamaño del texto del comentario */
+  color: #333; /* Color del texto */
+  margin-top: 20px; /* Espacio entre la imagen y el comentario */
+  text-align: justify;
+}
+.sidebar p {
+  text-align: justify; /* Justifica el texto dentro de los párrafos del sidebar */
+}
+
+.Comentario {
+  grid-column: 1 / 3; /* Esta sección ocupa ambas columnas de la cuadrícula. */
+  display: flex; /* Utiliza flexbox para organizar los comentarios. */
+  justify-content: space-between; /* Distribuye los comentarios con espacio entre ellos. */
+}
+
+.Comentario .comment-box {
+  flex: 1; /* Permite que las cajas de comentarios crezcan igualmente. */
+  margin: 10px; /* Margen de 10 píxeles entre las cajas de comentarios. */
+  background-color: #f2f5f2; /* Color de fondo amarillo claro para las cajas de comentarios. */
+  padding: 10px; /* Espaciado interno de 10 píxeles. */
+  border-radius: 5px; /* Bordes redondeados. */
+  text-align: justify; /* Centra el texto dentro de las cajas. */
+}
+
+.video-section {
+  grid-column: 1 / 3; /* Esta sección ocupa ambas columnas de la cuadrícula. */
+  background-color: #e1bee7; /* Color de fondo lila para la sección del video. */
+  padding: 15px; /* Espaciado interno de 15 píxeles. */
+  text-align: center; /* Centra el texto dentro de la sección. */
+  border-radius: 5px; /* Bordes redondeados. */
+  width: 50%; /* Ancho del 50% (puede ser ajustado según se necesite). */
+  margin: 0 auto; /* Centra la sección horizontalmente. */
+}
+
+.video-section iframe {
+  width: 100%; /* El iframe ocupa el 100% del ancho del contenedor. */
+  height: 500px; /* Mantiene la proporción del iframe. */
+}
+.video-course {
+    margin-top: 20px; /* Espaciado superior para el video */
+}
+
+.video-course iframe {
+    width: 100%; /* Hace que el video ocupe el ancho completo */
+    height: 500px; /* Ajusta la altura del video */
+    padding: 10px;
+
+}
+.video-promo iframe {
+  width: 100%; /* Hace que el video ocupe el ancho completo */
+  height: 300px; /* Ajusta la altura del video */
+  padding: 10px;
+
+}
+
+.video-course p {
+    margin-top: 10px; /* Espacio entre el video y el texto */
+    text-align: justify; /* Justifica el texto */
+    align-items: center; /* Centra el contenido verticalmente. */
+
+}
+.video-promo p {
+  margin-top: 10px; /* Espacio entre el video y el texto */
+  text-align: justify; /* Justifica el texto */
+  align-items: center; /* Centra el contenido verticalmente. */
+
+}
+.centrar-titulo {
+  text-align: center;
+}
+
+
+.support-form {
+  grid-column: 1 / 3; /* Esta sección ocupa ambas columnas de la cuadrícula. */
+  padding: 20px; /* Espaciado interno de 20 píxeles. */
+  display: flex; /* Utiliza flexbox para alinear elementos dentro del formulario. */
+  justify-content: center; /* Centra el contenido horizontalmente. */
+  align-items: center; /* Centra el contenido verticalmente. */
+}
+
+form {
+  display: flex; /* Utiliza flexbox para organizar los elementos del formulario. */
+  flex-direction: column; /* Organiza los elementos del formulario en una columna. */
+  width: 50%; /* Ancho del formulario al 50% del contenedor. */
+  background-color: white; /* Color de fondo blanco para el formulario. */
+  padding: 30px; /* Espaciado interno de 30 píxeles. */
+  border-radius: 10px; /* Bordes redondeados. */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del formulario. */
+}
+
+form label {
+  margin-bottom: 5px; /* Margen inferior de 5 píxeles para las etiquetas. */
+}
+/* Aumentar el tamaño de la fuente en el formulario */
+.support-form label,
+.support-form input,
+.support-form textarea {
+    font-size: 25px; /* Ajusta este valor según lo necesario */
+    text-align: justify;
+}
+
+
+
+
+form input,
+form textarea {
+  margin-bottom: 10px; /* Margen inferior de 10 píxeles para campos de entrada y área de texto. */
+  padding: 10px; /* Espaciado interno de 10 píxeles. */
+  border: 1px solid #ccc; /* Borde gris claro. */
+  border-radius: 5px; /* Bordes redondeados. */
+}
+
+form button {
+  background-color: #4caf50; /* Color de fondo verde para el botón. */
+  color: white; /* Color del texto del botón a blanco. */
+  padding: 30px; /* Espaciado interno de 10 píxeles. */
+  border: none; /* Sin borde alrededor del botón. */
+  border-radius: 20px; /* Bordes redondeados. */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón. */
+  font-size: 30px;
+}
+
+form button:hover {
+  background-color: #de4007; /* Cambia el color de fondo del botón al pasar el ratón. */
+}
+
+.support-info {
+  grid-column: 1 / 3; /* Esta sección ocupa ambas columnas de la cuadrícula. */
+  display: grid; /* Utiliza un diseño de cuadrícula para organizar la información de soporte. */
+  grid-template-columns: repeat(   3,    1fr  ); /* Crea tres columnas de igual tamaño. */
+  gap: 20px; /* Espacio de 20 píxeles entre las columnas. */
+  padding: 20px; /* Espaciado interno de 20 píxeles. */
+}
+form {
+    margin: 0 auto; /* Centramos el formulario */
+    width: 30%; /* Ajustamos el ancho a un 50% del contenedor */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Color de fondo del formulario */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 100%; /* Campos de entrada ocuparán el 100% del ancho del formulario */
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+form textarea {
+    width: 100%; /* Campos de entrada ocuparán el 100% del ancho del formulario */
+    padding: 50px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+form input[type="submit"] {
+    width: auto; /* Elimina el ancho del 100% */
+    padding: 10px 20px; /* Ajusta el tamaño del botón con más espacio interno horizontal */
+    color: rgb(212, 3, 3);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto; /* Esto centrará el botón */
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+.support-info-box {
+  background-color: #fff9c4; /* Color de fondo amarillo claro para las cajas de información de soporte. */
+  padding: 20px; /* Espaciado interno de 20 píxeles. */
+  border-radius: 5px; /* Bordes redondeados. */
+  text-align: center; /* Centra el texto dentro de las cajas. */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de las cajas de soporte. */
+  
+}
+.support-info-box p,
+.support-info-box ul {
+    text-align: justify;
+}
+
+
+/* Estilos para cursos y acerca de */
+.course-box,
+.info-box {
+  background-color: none; /* Color de fondo melocotón para las cajas de cursos e información. */
+  padding: 10px; /* Espaciado interno de 10 píxeles. */
+  margin-bottom: 10px; /* Margen inferior de 10 píxeles. */
+  border-radius: 5px; /* Bordes redondeados. */
+}
+.course-box {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido */
+    margin: 20px 0; /* Espaciado entre cursos */
+}
+
+.course-text {
+    flex: 1; /* Permite que el texto ocupe el espacio disponible */
+    text-align: justify; /* Justifica el texto */
+}
+
+.course-image {
+    width: 200px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: 20px; /* Espacio entre el texto y la imagen */
+}
+
+
+/* Adaptación del diseño para pantallas pequeñas */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Columna única en pantallas pequeñas. */
+  }
+
+  .student-comments {
+    flex-direction: column; /* Apila las cajas verticalmente en la sección de comentarios. */
+  }
+
+  .student-comments .comment-box {
+    width: 100%; /* Ocupa todo el ancho del contenedor. */
+    margin-bottom: 10px; /* Espacio vertical entre las cajas de comentarios. */
+  }
+
+  .support-info {
+    grid-template-columns: 1fr; /* Columna única en la sección de soporte. */
+  }
+
+  form {
+    width: 90%; /* Ajusta el ancho del formulario al 90% en pantallas pequeñas. */
+  }
+
+  /* Video responsivo */
+  .video-section iframe {
+    width: 100%; /* Se ajusta al 100% del contenedor. */
+    height: auto; /* Mantiene la proporción del video. */
+  }
+}
+.main-content p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #333; /* Color del texto */
+  margin: 20px 0;
+  text-align: justify; /* Justifica el texto */
+}
+.main-content p strong {
+  font-size: 1.5em; /* Aumenta el tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  color: #000; /* Opcional: asegúrate de que esté bien visible */
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra las imágenes horizontalmente */
+}
+
+.sidebar-image {
+  width: 50%; /* Ajusta el ancho de las imágenes al 100% del contenedor de la barra lateral */
+  margin-bottom: 50px; /* Espacio entre las imágenes */
+}
+
+.comment-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+.comment-box p {
+  font-size: 0.7em; /* Reduce el tamaño del texto */
+  font-style: italic; /* Aplica cursiva al texto */
+  text-align: center; /* Centra el texto debajo de la imagen */
+  margin-bottom: 10px; /* Espacio debajo del texto del comentario */
+}
+
+.comment-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%; /* Hace las imágenes circulares */
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1em;
+  text-align: center;
+}
+
+rating {
+  display: inline-block;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+.rating input {
+  display: none; /* Oculta los inputs de radio */
+}
+
+.rating label {
+  font-size: 2em;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.rating input:checked ~ label {
+  color: gold; /* Colorea las estrellas doradas cuando están seleccionadas */
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+  color: gold; /* Efecto hover para resaltar las estrellas */
+}
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.rating span {
+  font-size: 2em;
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.rating span:hover,
+.rating span:hover ~ span {
+  color: gold;
+}
+
+.rating[data-rating="1"] span[data-value="1"],
+.rating[data-rating="2"] span[data-value="1"],
+.rating[data-rating="2"] span[data-value="2"],
+.rating[data-rating="3"] span[data-value="1"],
+.rating[data-rating="3"] span[data-value="2"],
+.rating[data-rating="3"] span[data-value="3"],
+.rating[data-rating="4"] span[data-value="1"],
+.rating[data-rating="4"] span[data-value="2"],
+.rating[data-rating="4"] span[data-value="3"],
+.rating[data-rating="4"] span[data-value="4"],
+.rating[data-rating="5"] span[data-value="1"],
+.rating[data-rating="5"] span[data-value="2"],
+.rating[data-rating="5"] span[data-value="3"],
+.rating[data-rating="5"] span[data-value="4"],
+.rating[data-rating="5"] span[data-value="5"] {
+  color: rgb(227, 200, 24);
+}
+
+
+/* Footer */
+footer {
+  background-color: #2196f3; /* Color de fondo azul para el pie de página. */
+  text-align: center; /* Centra el texto del pie de página. */
+  color: white; /* Color del texto a blanco. */
+  padding: 20px; /* Espaciado interno de 10 píxeles. */
+  font-size: 25px; /* Tamaño de fuente de 18 píxeles. */
+}
